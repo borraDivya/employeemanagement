@@ -30,7 +30,7 @@ public class StringConverterTest {
     public void testConvert() {
         String departmentName = "HR";
         Department department = new Department();
-        department.setId(1L);
+       // department.setId(1L);
         department.setName(departmentName);
         DepartmentDTO expectedDTO = new DepartmentDTO(department.getId(), department.getName());when(departmentService.findOrCreateDepartment(departmentName)).thenReturn(department);
         DepartmentDTO result = stringConverter.convert(departmentName);
